@@ -1,0 +1,22 @@
+aavr = [];
+astdv = [];
+for i = 1:28
+    aavr = [aavr mean(aTfull(:,i))];
+    astdv = [astdv std(aTfull(:,i))];
+end
+
+aTfullnor = [];
+type = [];
+col = [];
+for i = 1:28
+    col = (aTfull(:,i) - mean(aTfull(:,i)))./std(aTfull(:,i));
+    aTfullnor = [aTfullnor col];
+end
+for i = 1:length(aTfull)
+   type = [type;4];
+end
+aTfullnor = [aTfullnor type];
+save('leglengthTrainFullNormalized.mat','aTfullnor');
+save('leglengthmeans.mat','aavr');
+save('ataxicstandardDivs.mat','astdv');
+clear all

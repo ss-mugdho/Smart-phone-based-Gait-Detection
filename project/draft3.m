@@ -1,0 +1,12 @@
+ah = adata(1,1:600);
+av = adata(2,1:600);
+llh = lldata(1,1:600);
+llv = lldata(2,1:600);
+nh = ndata(1,1:600);
+nv = ndata(2,1:600);
+sh = sdata(1,1:600);
+sv = sdata(2,1:600);
+acchor = [nh;sh;llh;ah];
+accvar = [nv;sv;llv;av];
+save('acchor.mat','acchor');
+save('accvar.mat','accvar');

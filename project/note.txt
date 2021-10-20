@@ -1,0 +1,5 @@
+standing = 0
+normal = 1
+stiff = 2
+leg length = 3
+ataxic = 4
