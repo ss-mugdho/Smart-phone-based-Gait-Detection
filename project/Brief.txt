@@ -9,20 +9,20 @@ Members : 1606099 - Sohan Salahuddin Mugdho
 
 1. Using the main11.m script features were extracted  and exported as ftr###.mat tables in
 the featureset folder. Before running the script, accelerometer and gyroscope sensor data 
-were imported in column vector format from the Dataset folder.The main11.m script was used 
-for normal walking pattern and main12.m was used for abnormal walking pattern.
+were imported in column vector format from the Dataset folder.The FeatureExtractNormal.m script was used 
+for normal walking pattern and FeatureExtractAbnormal.m was used for abnormal walking pattern.
 
-2. After loading all the feature tables from the featureset folder, ftrT2.m script was run 
-for merging all the tables. The final feature set is the ftrf1.mat file.
+2. After loading all the feature tables from the featureset folder, FeatureTableMerge.m script was run 
+for merging all the tables. The final feature set is the Featureset.mat file.
 
-3. After loading the ftrf1.mat file, the model was trained using classification learner app
+3. After loading the Featureset.mat file, the model was trained using classification learner app
 with 10 fold cross validation.
 
-4. For the real time execution of the system, the ftrapp1.slx simulation was deployed in the 
+4. For the real time execution of the system, the FeatureExtractionApp.slx simulation was deployed in the 
 android device.
 
 5. After connectiing both the PC and the android device with the same local area network, the
-app is run and the predct1.slx file is opened. Then the predct11.m script is run. 
+app is run and the AppToSimulinkUDPConnect.slx file is opened. Then the OnlinePrediction.m script is run. 
 
-6. For testing with pre-recorded accelerometer and gyroscope data the predct21.m script is run.
+6. For testing with pre-recorded accelerometer and gyroscope data the OfflinePrediction.m script is run.
  
